@@ -16,5 +16,9 @@ If it's not exported, then you need to run:
 
 ```sh
 curl -v -X POST localhost:5000/register -H 'Content-Type: application/json' \
--d '{"email": "ricardo@gmail.com", "name": "Ricardo", "password": "secret12", "passwordConfirmation": "secret12"}'
+-d '{"email": "ricardo@gmail.com", "name": "Ricardo", "password": "Secret12", "passwordConfirmation": "Secret12"}'
+
+curl -v -X POST localhost:5000/login -H 'Content-Type: application/json' -d '{"email": "ricardo@gmail.com", "password": "Secret12"}'
+
+curl -v -X POST localhost:5000/logout
 ```

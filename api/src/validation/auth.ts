@@ -29,6 +29,11 @@ const passwordConfirmation = Joi.valid(Joi.ref("password")).required();
 export const registerSchema = Joi.object({
   email,
   name,
-  password, // TODO: max
+  password,
   passwordConfirmation
+});
+
+export const loginSchema = Joi.object({
+  email,
+  password
 });
